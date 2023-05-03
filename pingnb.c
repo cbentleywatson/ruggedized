@@ -108,13 +108,25 @@ int main(int argc, char *argv[]) {
   char * s2 =  "/dev/ttyS2";
   char * s3 ="/dev/ttyS3";
   char *s5 ="/dev/ttyS5";
-
+  char *s6 ="/dev/vdcRS485";
+  char *s7 = "/dev/vdcRS232";
+  char *s8 ="/dev/vdcRS485_2";
+  char *s9 = "/dev/vdcRS232_2";
   if(strcmp(target_device, s3)==0){
   	port_id = "RS485";
   }else if(strcmp(target_device, s2) ==0 ){
   	port_id = "RS232_Port_2";
   } else if(strcmp(target_device,s5)==0){
   	port_id="RS232_Port_1";
+  } else if(strcmp(target_device,s6)==0){
+  	port_id="RS485";
+  } else if(strcmp(target_device,s7)==0){
+  	port_id="RS232";
+  
+  } else if(strcmp(target_device,s8)==0){
+  	port_id="RS485_2";
+  } else if(strcmp(target_device,s9)==0){
+  	port_id="RS232_2";
   }else{
   	port_id="unknown_port";
   }
