@@ -1,0 +1,3 @@
+0xdf100000 MMIO on /dev/ttyS5
+0xdf100400 MMIO on /dev/ttyS2
+0xdf100800 MMIO on /dev/ttyS3

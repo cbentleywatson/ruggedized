@@ -4,7 +4,7 @@ echo "Welcome to 'test all.sh' i.e. 'tall' Change the ping wait time by changing
 echo "tall.sh pings ports /dev/ttyS5 (RS232 Port #1), /dev/ttyS2 (RS232 Port #2), and /dev/ttyS3 (RS485 Port 1) simultaneously"
 # I'm not messing around with these permissions
 #chmod 777 /dev/ttyS*
-sudo ./pingnb.o $TIME /dev/ttyS5  & sudo ./pingnb.o $TIME /dev/ttyS3    & sudo ./pingnb.o $TIME /dev/ttyS2 & sudo ./kill-ping-q.sh
+sudo ./pingnb.o $TIME /dev/ttyS5  & sudo ./pingnb.o $TIME /dev/ttyS3    & sudo ./pingnb.o $TIME /dev/ttyS2 & sudo ./kill-ping-q.sh 
 #sudo ./pingnb.o $TIME /dev/ttyS5  & sudo ./pingnb.o $TIME /dev/ttyS3    & sudo ./pingnb.o $TIME /dev/ttyS2 
 
 #sudo ./kill-ping.sh
@@ -14,21 +14,4 @@ sudo ./pingnb.o $TIME /dev/ttyS5  & sudo ./pingnb.o $TIME /dev/ttyS3    & sudo .
 #echo "" # blank line
 
 
-
-
-#echo "Press 'q' to exit"
-#count=0
-#while : ; do
-#read -n 1 k <&1
-#if [[ $k = q ]] ; then
-#printf "\nQuitting from the program\n"
-#break
-#else
-#((count=$count+1))
-#printf "\nIterate for $count times\n"
-#echo "Press 'q' to exit"
-#fi
-#done
-#sudo ./kill-ping.sh
-#killall glxgears
 
